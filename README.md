@@ -15,8 +15,9 @@
 ## เชื่อม AI กับสมองบริษัท
 ทุก skill ทำงานผ่าน connector Limitless Company Brain (MCP) ที่ `https://brain.jeditrinupab.com/api/mcp`
 
-- **Claude Code:** รัน `claude mcp add --transport http limitless-brain https://brain.jeditrinupab.com/api/mcp` แล้วพิมพ์ `/mcp` เพื่อล็อกอิน แอปจะติดตั้ง skills ลง `~/.claude/skills` ให้เอง
-- **Codex และ Cursor:** เพิ่ม MCP server เดียวกัน แอปจะติดตั้ง skills ลง `~/.agents/skills` ให้เอง
+- **Claude Code:** รัน `claude mcp add --transport http --scope user limitless-brain https://brain.jeditrinupab.com/api/mcp` แล้วพิมพ์ `/mcp` เพื่อล็อกอิน แอปจะติดตั้ง skills ลง `~/.claude/skills` ให้เอง
+- **Codex:** รัน `codex mcp add limitless-brain --url https://brain.jeditrinupab.com/api/mcp` แล้วล็อกอินในเบราว์เซอร์ แอปจะติดตั้ง skills ลง `~/.agents/skills` ให้เอง
+- **Cursor และแอปอื่น:** ดูคู่มือ brain.jeditrinupab.com/downloads/install ส่วนที่ 4
 - **แอป Claude:** เพิ่ม connector ด้วย URL ข้างบน แล้วพิมพ์ เช่น "ใช้ skill brain-setup จากสมองบริษัท" Claude จะอ่าน skill ผ่าน `list_skills`, `get_skill` และ `read_skill_file` เอง
 
 ## Skills ทั้ง 5 ตัว
@@ -57,8 +58,9 @@ Then run **brain-setup** in a new vault and replace the example notes with your 
 ### Connect your AI
 Every skill works through the Limitless Company Brain connector (MCP) at `https://brain.jeditrinupab.com/api/mcp`.
 
-- **Claude Code:** `claude mcp add --transport http limitless-brain https://brain.jeditrinupab.com/api/mcp`, then `/mcp` to sign in. The desktop app installs the skills into `~/.claude/skills`.
-- **Codex and Cursor:** add the same MCP server. The desktop app installs the skills into `~/.agents/skills`.
+- **Claude Code:** `claude mcp add --transport http --scope user limitless-brain https://brain.jeditrinupab.com/api/mcp`, then `/mcp` to sign in. The desktop app installs the skills into `~/.claude/skills`.
+- **Codex:** `codex mcp add limitless-brain --url https://brain.jeditrinupab.com/api/mcp`, then sign in in the browser. The desktop app installs the skills into `~/.agents/skills`.
+- **Cursor and other apps:** see brain.jeditrinupab.com/downloads/install?lang=en, Part 4.
 - **Claude app:** add the connector with the URL above, then ask, for example, "use the brain-setup skill from the company brain". Claude reads the skill through `list_skills`, `get_skill` and `read_skill_file`.
 
 ### The five skills
